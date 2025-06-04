@@ -30,7 +30,7 @@ class TestSpec:
                 raise ContessException(
                     f'Could not read file {spec_file}') from e
         else:
-            spec = {'pipeline_test_cases': [str(spec_file.name)]}
+            spec = {'pipeline_test_cases': ['../data/json/pipeline/' + str(spec_file.name) + '.json']}
         if not cpp_exe.exists():
             raise ContessException(f'Could not find cpp executable {cpp_exe}')
 
