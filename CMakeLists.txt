@@ -245,3 +245,5 @@ target_link_libraries(Tests${PROJECT_NAME} PUBLIC
   CLI11::CLI11 # command line parser
   Catch2::Catch2 # Unit test framework
 )
+
+target_link_options(Tests${PROJECT_NAME} PRIVATE "-Wl,--allow-multiple-definition")

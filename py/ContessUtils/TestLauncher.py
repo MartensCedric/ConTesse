@@ -25,6 +25,7 @@ class TestSpec:
         if '.json' in os.path.splitext(spec_file):
             try:
                 spec = json.loads(spec_file.read_text())
+                spec['pipeline_test_cases'] = [str(spec_file.name)]
             except Exception as e:
                 raise ContessException(
                     f'Could not read file {spec_file}') from e

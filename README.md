@@ -26,7 +26,17 @@ Building
     conda env update --file conda_contesse.yaml
     conda activate contess
     ```
-2. Build the code
+2. Install additional packages
+   ```
+   sudo apt-get install libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libxxf86vm-dev
+   ```
+3. Setup ContesseUtils
+   ```
+   cd py/
+   pip install -e .
+   cd ..
+   ```
+4. Build the code
     ```bash
     mkdir build && cd build
     cmake .. -DCMAKE_BUILD_TYPE=Release
